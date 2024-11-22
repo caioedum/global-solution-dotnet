@@ -1,0 +1,120 @@
+﻿@model IEnumerable<EnergyLinkGlobalSolution.Models.Monitoramento>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento - EnergyLink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            margin-bottom: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #006400;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .table thead {
+            background-color: #006400;
+            color: #fff;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        .table tbody tr:hover {
+            background-color: #d8f7dc;
+        }
+
+        .btn-outline-primary {
+            color: #006400;
+            border-color: #006400;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: #006400;
+                color: #fff;
+            }
+
+        .btn {
+            font-weight: 600;
+        }
+
+        .btn-edit {
+            color: #006400;
+            border-color: #006400;
+        }
+
+            .btn-edit:hover {
+                background-color: #006400;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Lista de Monitoramentos</h2>
+
+        <div class="text-end mb-3">
+            <a href="@Url.Action("Create", "Monitoramento")" class="btn btn-success">
+                Criar Novo Monitoramento
+            </a>
+        </div>
+
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Entidade</th>
+                    <th>Data do Monitoramento</th>
+                    <th>Valor da Energia</th>
+                    <th>Tipo de Monitoramento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var monitoramento in Model)
+                {
+                    <tr>
+                        <td>@monitoramento.IdMonitoramento</td>
+                        <td>@monitoramento.IdEntidade</td>
+                        <td>@monitoramento.DataMonitoramento.ToString("dd/MM/yyyy")</td>
+                        <td>@monitoramento.Energia</td>
+                        <td>@monitoramento.TipoMonitoramento</td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Monitoramento", new { id = monitoramento.IdEntidade })" class="btn btn-outline-primary btn-sm btn-edit">Editar</a>
+                            <form asp-action="Delete" asp-route-id="@monitoramento.IdMonitoramento" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+          
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

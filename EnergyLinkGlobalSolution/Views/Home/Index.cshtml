@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Página Principal";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyLink - Solução Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .home-header {
+            background: linear-gradient(135deg, #006400, #32a852);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .home-header h1 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .home-header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .section-title {
+            font-weight: 600;
+            color: #006400;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .feature-card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .feature-card .card-body {
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="home-header">
+        <h1>Bem-vindo à EnergyLink</h1>
+        <p>A solução inteligente para monitoramento e gestão eficiente de energia.</p>
+    </header>
+    <div class="container mt-5">
+        <section class="mb-5">
+            <h2 class="section-title">Sobre Nossa Solução</h2>
+            <p>
+                A EnergyLink foi criada para transformar a maneira como as empresas e indivíduos gerenciam o consumo de energia.
+                Oferecemos uma plataforma robusta que permite monitorar, analisar e otimizar o uso de energia de forma sustentável
+                e econômica. Nossa solução combina tecnologia de ponta com uma interface amigável, ajudando você a tomar decisões mais inteligentes.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title">Recursos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="~/img/monitoramento.png" alt="Monitoramento em tempo real" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitoramento em Tempo Real</h5>
+                            <p class="card-text">Acompanhe o consumo de energia em tempo real e identifique padrões de uso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="~/img/relatorio.jpg" alt="Relatórios detalhados" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Relatórios Detalhados</h5>
+                            <p class="card-text">Receba relatórios personalizáveis que ajudam na tomada de decisão.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="~/img/energia-limpa.jpg" alt="Sustentabilidade" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Sustentabilidade</h5>
+                            <p class="card-text">Promova práticas sustentáveis com insights sobre redução de consumo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

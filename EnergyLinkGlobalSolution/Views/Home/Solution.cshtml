@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Nossa Solução - EnergyLink";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #006400;
+            margin-bottom: 2rem;
+            margin-top: 35px;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .section-container {
+            margin-top: 3rem;
+            padding: 3rem 1.5rem;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-block {
+            margin-top: 2rem;
+            color: #333;
+        }
+
+        .btn-green {
+            background-color: #006400 !important;
+            color: #fff;
+            width: 100%;
+        }
+
+            .btn-green:hover {
+                background-color: #004d00;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-header">
+            <h2>Nossa Solução</h2>
+        </div>
+
+        <div class="section-description">
+            <p>A plataforma digital conecta cidades e comunidades que produzem energia limpa (eólica e solar) com cidades vizinhas que possuem demanda por energia, oferecendo um custo acessível e sustentável.</p>
+        </div>
+
+        <div class="section-container">
+            <div class="image-container">
+                <img src="~/img/energia-eolica.webp" alt="Plataforma de Distribuição de Energia Sustentável">
+            </div>
+            <div class="text-block">
+                <h3>Plataforma de Distribuição de Energia Sustentável</h3>
+                <p>A proposta é criar uma plataforma para conectar cidades e comunidades que geram energia limpa com regiões próximas que precisam dessa energia, utilizando fontes renováveis como a energia solar e eólica. O objetivo é promover a autossuficiência energética e garantir a sustentabilidade através da gestão eficiente da energia produzida.</p>
+            </div>
+        </div>
+
+        <div class="section-container mt-4">
+            <div class="image-container">
+                <img src="~/img/comunidade.jpg" alt="Energia Sustentável para Cidades Próximas">
+            </div>
+            <div class="text-block">
+                <h3>Distribuição de Energia para Cidades Vizinhas</h3>
+                <p>Com a gestão de "pontos de energia", a plataforma assegura que a energia excedente seja distribuída de maneira eficiente, proporcionando energia a preços mais acessíveis para as cidades vizinhas, contribuindo para a autossuficiência energética e a redução de custos com energia.</p>
+            </div>
+        </div>
+
+        <div class="section-container mt-4">
+            <div class="image-container">
+                <img src="~/img/paineis-solares.jpg" alt="Comunidades com Energia Limpa">
+            </div>
+            <div class="text-block">
+                <h3>Benefícios para Comunidades</h3>
+                <p>As comunidades envolvidas na geração de energia limpa têm a oportunidade de melhorar sua qualidade de vida e gerar receita através da venda da energia excedente para cidades vizinhas, criando um ciclo sustentável e econômico para todas as partes envolvidas.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-5" style="margin-bottom: 45px">
+            <a href="mailto:contato@energylink.com?subject=Mais informações&body=Olá, gostaria de saber mais sobre os seus serviços." class="btn btn-green">
+                Saiba Mais
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿@model EnergyLinkGlobalSolution.DTOs.MonitoramentoDTO
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Monitoramento - EnergyLink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #006400;
+        }
+
+        .btn-outline-primary {
+            color: #006400;
+            border-color: #006400;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #006400;
+            color: #fff;
+        }
+
+        .btn {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Editar Monitoramento</h2>
+
+        <form asp-action="Edit" method="post">
+            <div class="form-group mb-3">
+                <label for="IdEntidade">ID da Entidade</label>
+                <input type="text" class="form-control" id="IdEntidade" name="IdEntidade" value="@Model.IdEntidade" readonly />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="DataMonitoramento">Data do Monitoramento</label>
+                <input type="date" class="form-control" id="DataMonitoramento" name="DataMonitoramento" value="@Model.DataMonitoramento.ToString("yyyy-MM-dd")" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="Energia">Valor da Energia</label>
+                <input type="number" class="form-control" id="Energia" name="Energia" value="@Model.Energia" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="TipoMonitoramento">Tipo de Monitoramento</label>
+                <input type="text" class="form-control" id="TipoMonitoramento" name="TipoMonitoramento" value="@Model.TipoMonitoramento" required />
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary">Salvar Alterações</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
